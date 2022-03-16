@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Api.Controllers
+namespace ApiGateway.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -13,8 +13,8 @@ namespace Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Get()
         {
             return Ok();
         }
