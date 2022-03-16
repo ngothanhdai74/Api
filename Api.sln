@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{19350697-88B3-49DC-873F-0DAF82365D4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire", "Hangfire\Hangfire.csproj", "{5AEF67CE-43F8-4841-8724-58273CB899F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkFlow", "WorkFlow\WorkFlow.csproj", "{B3E4DE18-8687-447B-A129-5F07A38C88E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{19350697-88B3-49DC-873F-0DAF82365D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19350697-88B3-49DC-873F-0DAF82365D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19350697-88B3-49DC-873F-0DAF82365D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
