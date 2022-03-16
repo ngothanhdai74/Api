@@ -1,4 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddJsonFile("ocelot.json", true, true);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
