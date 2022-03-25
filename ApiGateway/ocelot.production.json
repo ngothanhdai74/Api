@@ -1,0 +1,854 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://cmc.ts.apigateway:5555"
+  },
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.APIGateway"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.UMS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/ums/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.UMS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.CFG",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/cfg/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.CFG"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.Catalog",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/catalog/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.Catalog"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.Catalog",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/catalog/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.Catalog"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.TS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/ts/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.TS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.DT",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/dt/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.DT"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.ECM",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/ecm/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.ECM"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.TC",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/tc/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.TC"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.CBGV",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/cbgv/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.CBGV"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.KT",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/kt/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.KT"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.KS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/ks/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.KS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.CSVC",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/csvc/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.CSVC"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.CA",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/ca/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.CA"
+    },
+    {
+      "DownstreamPathTemplate": "/ws",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.Notification",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/ws",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.Notification"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDU.Notification",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edu/notification/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDU.Notification"
+    },
+    // EDOC
+    {
+      "DownstreamPathTemplate": "/api/Account/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.UMS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/ums/Account/login",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDOC.UMS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.UMS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/ums/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.UMS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.WFS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/wfs/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.WFS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.DMS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/dms/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.DMS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.CTL",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/ctl/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.CTL"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.CFG",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/CFG/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.CFG"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.DOC",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/DOC/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.DOC"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.TASK",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/task/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.TASK"
+    },
+    {
+      "DownstreamPathTemplate": "/api/CalendarEvent/GetEventShowOnEBoard",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.CAL",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/cal/CalendarEvent/GetEventShowOnEBoard",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.CAL"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.CAL",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/cal/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.CAL"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.RPT",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/rpt/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.RPT"
+    },
+    {
+      "DownstreamPathTemplate": "/ws",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.Notification",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/ws",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC.TS.EDOC.Notification"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDOC.Notification",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/notification/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.Notification"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.CMS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/cms/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.CMS"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.WFS.EventProcessing",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/wfsevt/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.WFS.Evt"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Integrate/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.EDoc.Integrate.Hub",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/Integrate/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDoc.Integrate.Hub"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "10.162.81.77",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/edoc/sign/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.SIGN"
+    },
+    // SCan V5
+    {
+      "DownstreamPathTemplate": "/edoc/ums/Account/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "cmc.ts.scan.v5",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/v5/edoc/ums/Account/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "CMC.TS.SCan.V5"
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "cmc.ts.scan.v5",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/v5/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.SCan.V5"
+    },
+    // VNP
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC-TS-VNP-SALES",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/vnp/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "CMC-TS-VNP-SALES"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "CMC.TS.APIGateway",
+      "Config": [
+        {
+          "Name": "CMC.TS.APIGateway API",
+          "Version": "v1",
+          "Url": "http://localhost/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    // EDU
+    {
+      "Key": "CMC.TS.EDU.UMS",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.UMS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.ums/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.CFG",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.CFG API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.cfg/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.Catalog",
+      "Config": [
+        {
+          "Name": "CMC.TS.Catalog API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.catalog/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.Catalog",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.Catalog API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.catalog/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.TS",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.TS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.ts/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.DT",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.DT API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.dt/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.ECM",
+      "Config": [
+        {
+          "Name": "CMC.TS.ECM API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.ecm/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.TC",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.TC API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.tc/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.CBGV",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.CBGV API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.cbgv/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.KT",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.KT API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.kt/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.KS",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.KS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.ks/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.CSVC",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.CSVC API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.csvc/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.CA",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.CA API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.ca/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDU.Notification",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDU.Notification API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edu.notification/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    // EDOC
+    {
+      "Key": "CMC.TS.EDOC.UMS",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.UMS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.ums/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.WFS",
+      "Config": [
+        {
+          "Name": "CMC.TS.WFS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.wfs/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.DMS",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.DMS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.dms/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.CTL",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.CTL API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.ctl/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.CFG",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.CFG API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.cfg/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.DOC",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.DOC API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.doc/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.TASK",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.TASK API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.task/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.CAL",
+      "Config": [
+        {
+          "Name": "CMC.TS.CAL API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.cal/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.RPT",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.RPT API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.rpt/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.Notification",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.Notification API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.edoc.notification/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.CMS",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.CMS API",
+          "Version": "v1",
+          "Url": "http://cmc.ts.cms/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.WFS.Evt",
+      "Config": [
+        {
+          "Name": "CMC.TS.WFS.Evt API",
+          "Version": "v1",
+          "Url": "http://CMC.TS.WFS.EventProcessing/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDoc.Integrate.Hub",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDoc.Integrate.Hub API",
+          "Version": "v1",
+          "Url": "http://CMC.TS.EDoc.Integrate.Hub/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "CMC.TS.EDOC.SIGN",
+      "Config": [
+        {
+          "Name": "CMC.TS.EDOC.SIGN API",
+          "Version": "v1",
+          "Url": "http://10.162.81.77:5001/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    // Scan V5
+    {
+      "Key": "CMC.TS.Scan.V5",
+      "Config": [
+        {
+          "Name": "CMC.TS.Scan.V5",
+          "Version": "v1",
+          "Url": "http://cmc.ts.scan.v5/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    // VNP
+    {
+      "Key": "CMC-TS-VNP-SALES",
+      "Config": [
+        {
+          "Name": "CMC-TS-VNP-SALES API",
+          "Version": "v1",
+          "Url": "http://cmc-ts-vnp-sales/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
