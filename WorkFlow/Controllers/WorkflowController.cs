@@ -4,12 +4,12 @@ namespace WorkFlow.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class HealthCheckController : ControllerBase
+    public class WorkflowController : ControllerBase
     {
 
-        private readonly ILogger<HealthCheckController> _logger;
+        private readonly ILogger<WorkflowController> _logger;
 
-        public HealthCheckController(ILogger<HealthCheckController> logger)
+        public WorkflowController(ILogger<WorkflowController> logger)
         {
             _logger = logger;
         }
