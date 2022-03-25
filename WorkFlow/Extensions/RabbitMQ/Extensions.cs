@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using EasyNetQ;
+using System.Reflection;
 using WorkFlow.Models.RabbitMQ;
 
 namespace WorkFlow.Extensions.RabbitMQ
@@ -9,6 +10,8 @@ namespace WorkFlow.Extensions.RabbitMQ
         {
             var options = new RabbitOptions();
             configuration.GetSection(nameof(RabbitOptions)).Bind(options);
+            services.AddSingleton(RabbitHutch.CreateBus($"host={options.Host};virtualHost={options.VirtualHost};username={options.User};password={options.Password}"));
+
             return null;
         }
     }
