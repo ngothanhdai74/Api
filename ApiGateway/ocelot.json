@@ -1,16 +1,38 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/todos/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "jsonplaceholder.typicode.com",
-          "Port": 443
+          "Host": "CMC.TS.EDOC.UMS",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/todos/{id}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/edoc/ums/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.EDOC.UMS"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "CMC.TS.WFS",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/wfs/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "eDocman",
+        "AllowedScopes": []
+      },
+      "SwaggerKey": "CMC.TS.WFS"
     }
   ],
   "GlobalConfiguration": {
