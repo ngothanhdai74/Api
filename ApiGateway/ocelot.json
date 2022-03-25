@@ -9,30 +9,9 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/edoc/ums/{everything}",
+      "UpstreamPathTemplate": "/hangfire/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "eDocman",
-        "AllowedScopes": []
-      },
-      "SwaggerKey": "CMC.TS.EDOC.UMS"
-    },
-    {
-      "DownstreamPathTemplate": "/api/{everything}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "CMC.TS.WFS",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/wfs/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "eDocman",
-        "AllowedScopes": []
-      },
-      "SwaggerKey": "CMC.TS.WFS"
+      "SwaggerKey": "DAINT.HANGFIRE"
     }
   ],
   "GlobalConfiguration": {
