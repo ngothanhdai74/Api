@@ -12,14 +12,12 @@ builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
 
 var app = builder.Build();
+app.UseSwaggerForOcelotUI();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseSwaggerForOcelotUI();
-
 app.UseOcelot().Wait();
 app.UseAuthorization();
 app.MapControllers();
