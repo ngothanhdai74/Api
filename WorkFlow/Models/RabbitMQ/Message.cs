@@ -3,7 +3,7 @@
     public class Message
     {
         public MessageHeader Header { get; set; }
-        public virtual MessageBody Body { get; set; }
+        public MessageBody Body { get; set; }
         public MessageSecurity Security { get; set; }
     }
     public class MessageHeader
