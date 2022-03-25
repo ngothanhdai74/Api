@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{19350697-88B3-49DC-873F-0DAF82365D4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire", "Hangfire\Hangfire.csproj", "{5AEF67CE-43F8-4841-8724-58273CB899F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire", "Hangfire\Hangfire.csproj", "{5AEF67CE-43F8-4841-8724-58273CB899F6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkFlow", "WorkFlow\WorkFlow.csproj", "{B3E4DE18-8687-447B-A129-5F07A38C88E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkFlow", "WorkFlow\WorkFlow.csproj", "{B3E4DE18-8687-447B-A129-5F07A38C88E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{19350697-88B3-49DC-873F-0DAF82365D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19350697-88B3-49DC-873F-0DAF82365D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19350697-88B3-49DC-873F-0DAF82365D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19350697-88B3-49DC-873F-0DAF82365D4F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AEF67CE-43F8-4841-8724-58273CB899F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
