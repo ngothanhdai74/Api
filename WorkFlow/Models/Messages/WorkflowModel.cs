@@ -3,7 +3,7 @@ using EasyNetQ;
 
 namespace WorkFlow.Models.Messages
 {
-    [Queue("TestMessagesQueue", ExchangeName = "MyTestExchange")]
+    [Queue(nameof(WorkflowModel))]
     public class WorkflowModel
     {
 
