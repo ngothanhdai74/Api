@@ -24,7 +24,10 @@ namespace WorkFlow.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            WorkflowModel message = new WorkflowModel();
+            WorkflowModel message = new WorkflowModel()
+            {
+                Name = "Test"
+            };
             await _bus.PubSub.PublishAsync(message);
             return Ok();
         }
