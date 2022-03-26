@@ -12,9 +12,7 @@ namespace WorkFlow.Extensions.RabbitMQ
             var options = new RabbitOptions();
             configuration.GetSection(nameof(RabbitOptions)).Bind(options);
             string connectionString = $"host={options.Host};virtualHost={options.VirtualHost};username={options.User};password={options.Password}";
-            var instance = RabbitHutch.CreateBus(connectionString,
-                services => services.Register<IConventions>(c => new MyConventions(c.Resolve<ITypeNameSerializer>()))
-                );
+            var instance = RabbitHutch.CreateBus(connectionString);
             services.AddSingleton(instance);
             return services;
         }
@@ -23,13 +21,6 @@ namespace WorkFlow.Extensions.RabbitMQ
             var bus = app.ApplicationServices.GetRequiredService<IBus>();
             var subscriber = new AutoSubscriber(bus, Guid.NewGuid().ToString());
             subscriber.Subscribe(Assembly.GetExecutingAssembly().GetTypes());
-        }
-    }
-    public class MyConventions : Conventions
-    {
-        public MyConventions(ITypeNameSerializer typeNameSerializer) : base(typeNameSerializer)
-        {
-            ErrorQueueNamingConvention = messageInfo => "MyErrorQueue";
         }
     }
 }
