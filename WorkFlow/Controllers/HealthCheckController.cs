@@ -17,7 +17,11 @@ namespace WorkFlow.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            _logger.LogError("Đại Test");
+            _logger.LogError("DAINT Test LogError");
+            _logger.LogInformation("DAINT Test LogInformation");
+            _logger.LogCritical("DAINT Test LogCritical");
+            _logger.LogTrace("DAINT Test LogTrace");
+            _logger.LogWarning("DAINT Test LogWarning");
             return Ok();
         }
     }
