@@ -1,6 +1,7 @@
 using EasyNetQ;
 using Microsoft.AspNetCore.Mvc;
 using WorkFlow.Models.Messages;
+using WorkFlow.Extensions.RabbitMQ;
 
 namespace WorkFlow.Controllers
 {
@@ -28,7 +29,7 @@ namespace WorkFlow.Controllers
             {
                 Name = "Test"
             };
-            await _bus.PubSub.PublishAsync(message);
+            await _bus.Publish(message);
             return Ok();
         }
     }
