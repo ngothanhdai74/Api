@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace WorkFlow.Controllers
 {
@@ -17,6 +17,7 @@ namespace WorkFlow.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            _logger.LogInformation("Đại Test");
             return Ok();
         }
     }
