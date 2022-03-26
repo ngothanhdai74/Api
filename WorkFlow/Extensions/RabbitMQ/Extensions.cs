@@ -12,7 +12,7 @@ namespace WorkFlow.Extensions.RabbitMQ
             configuration.GetSection(nameof(RabbitOptions)).Bind(options);
             services.AddSingleton(RabbitHutch.CreateBus($"host={options.Host};virtualHost={options.VirtualHost};username={options.User};password={options.Password}"));
 
-            return null;
+            return services;
         }
     }
 }
