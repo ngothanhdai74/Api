@@ -1,9 +1,6 @@
 using WorkFlow.Extensions.RabbitMQ;
-
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddRabbitMQ(builder.Configuration);
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
