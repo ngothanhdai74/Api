@@ -17,7 +17,7 @@ namespace WorkFlow.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            _logger.LogInformation("Đại Test");
+            _logger.LogError("Đại Test");
             return Ok();
         }
     }
