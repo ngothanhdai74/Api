@@ -1,4 +1,9 @@
-﻿using System.Text;
+﻿using Aspose.Cells;
+using Aspose.Words;
+using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas.Parser;
+using iText.Kernel.Pdf.Canvas.Parser.Listener;
+using System.Text;
 
 namespace WorkFlow.Helpers
 {
@@ -22,26 +27,26 @@ namespace WorkFlow.Helpers
         {
             try
             {
-                StringBuilder sResult = new StringBuilder();
-                Aspose.Words.LoadOptions options = new Aspose.Words.LoadOptions();
-                options.LoadFormat = Aspose.Words.LoadFormat.Auto;
-                Document doc = new Document(stream, options);
-                NodeCollection nodes = doc.GetChildNodes(NodeType.Paragraph, true);
-                foreach (Node node in nodes)
-                {
-                    string nodeText = node.ToString(Aspose.Words.SaveFormat.Text);
-                    if (!string.IsNullOrEmpty(nodeText))
-                    {
-                        sResult.Append(node.ToString(Aspose.Words.SaveFormat.Text) + " ");
-                    }
-                }
-                return sResult.ToString();
+                //StringBuilder sResult = new StringBuilder();
+                //Aspose.Words.LoadOptions options = new Aspose.Words.LoadOptions();
+                //options.LoadFormat = Aspose.Words.LoadFormat.Auto;
+                //Document doc = new Document(stream, options);
+                //NodeCollection nodes = doc.GetChildNodes(NodeType.Paragraph, true);
+                //foreach (Node node in nodes)
+                //{
+                //    string nodeText = node.ToString(Aspose.Words.SaveFormat.Text);
+                //    if (!string.IsNullOrEmpty(nodeText))
+                //    {
+                //        sResult.Append(node.ToString(Aspose.Words.SaveFormat.Text) + " ");
+                //    }
+                //}
+                //return sResult.ToString();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return "";
             }
+            return "";
         }
         public static string ExcelToFullText(Stream stream)
         {
