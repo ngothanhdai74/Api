@@ -1,4 +1,6 @@
+using EasyNetQ;
 using Microsoft.AspNetCore.Mvc;
+using WorkFlow.Models.Messages;
 
 namespace WorkFlow.Controllers
 {
@@ -8,15 +10,22 @@ namespace WorkFlow.Controllers
     {
 
         private readonly ILogger<WorkflowController> _logger;
+        private readonly IBus _bus;
 
-        public WorkflowController(ILogger<WorkflowController> logger)
+        public WorkflowController(
+            ILogger<WorkflowController> logger,
+            IBus bus
+            )
         {
             _logger = logger;
+            _bus = bus;
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
+            Message<WorkflowModel> message = new Message<WorkflowModel>(new WorkflowModel());
+            await _bus.PubSub.PublishAsync(message);
             return Ok();
         }
     }
