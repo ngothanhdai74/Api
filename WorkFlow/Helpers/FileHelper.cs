@@ -1,9 +1,5 @@
-﻿using Aspose.Cells;
+﻿
 using Aspose.Words;
-using iText.Kernel.Pdf;
-using iText.Kernel.Pdf.Canvas.Parser;
-using iText.Kernel.Pdf.Canvas.Parser.Listener;
-using System.Text;
 
 namespace WorkFlow.Helpers
 {
@@ -11,17 +7,18 @@ namespace WorkFlow.Helpers
     {
         public static string PdfToFullText(this Stream stream)
         {
-            string fullText = "";
-            var pdfDocument = new PdfDocument(new PdfReader(stream));
-            var strategy = new LocationTextExtractionStrategy();
-            for (int i = 1; i <= pdfDocument.GetNumberOfPages(); ++i)
-            {
-                var page = pdfDocument.GetPage(i);
-                string text = PdfTextExtractor.GetTextFromPage(page, strategy);
-                fullText += Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(text)));
-            }
-            pdfDocument.Close();
-            return fullText;
+            //string fullText = "";
+            //var pdfDocument = new PdfDocument(new PdfReader(stream));
+            //var strategy = new LocationTextExtractionStrategy();
+            //for (int i = 1; i <= pdfDocument.GetNumberOfPages(); ++i)
+            //{
+            //    var page = pdfDocument.GetPage(i);
+            //    string text = PdfTextExtractor.GetTextFromPage(page, strategy);
+            //    fullText += Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(text)));
+            //}
+            //pdfDocument.Close();
+            //return fullText;
+            return null;
         }
         public static string WordToFullText(this Stream stream)
         {
@@ -54,27 +51,28 @@ namespace WorkFlow.Helpers
         }
         public static string ExcelToFullText(Stream stream)
         {
-            StringBuilder sResult = new StringBuilder();
-            Workbook workbook = new Workbook(stream);
-            foreach (Worksheet sheet in workbook.Worksheets)
-            {
-                for (int row = 0; row <= sheet.Cells.MaxDataRow; row++)
-                {
-                    for (int col = 0; col <= sheet.Cells.MaxDataColumn; col++)
-                    {
-                        Cell cell = sheet.Cells[row, col];
-                        if (cell.Value != null)
-                        {
-                            string cellValue = cell.Value.ToString().Trim();
-                            if (!string.IsNullOrEmpty(cellValue))
-                            {
-                                sResult.Append(cellValue + " ");
-                            }
-                        }
-                    }
-                }
-            }
-            return sResult.ToString();
+            //StringBuilder sResult = new StringBuilder();
+            //Workbook workbook = new Workbook(stream);
+            //foreach (Worksheet sheet in workbook.Worksheets)
+            //{
+            //    for (int row = 0; row <= sheet.Cells.MaxDataRow; row++)
+            //    {
+            //        for (int col = 0; col <= sheet.Cells.MaxDataColumn; col++)
+            //        {
+            //            Cell cell = sheet.Cells[row, col];
+            //            if (cell.Value != null)
+            //            {
+            //                string cellValue = cell.Value.ToString().Trim();
+            //                if (!string.IsNullOrEmpty(cellValue))
+            //                {
+            //                    sResult.Append(cellValue + " ");
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            //return sResult.ToString();
+            return null;
         }
         public static string TxtToFullText(Stream stream)
         {

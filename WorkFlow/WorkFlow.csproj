@@ -8,14 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspose.BarCode" Version="22.3.0" />
-    <PackageReference Include="Aspose.Cells" Version="22.3.0" />
-    <PackageReference Include="Aspose.OCR" Version="22.2.0" />
-    <PackageReference Include="Aspose.PDF" Version="22.3.0" />
-    <PackageReference Include="Aspose.Slides.NET" Version="22.3.0" />
-    <PackageReference Include="Aspose.Words" Version="22.3.0" />
     <PackageReference Include="EasyNetQ" Version="6.3.1" />
-    <PackageReference Include="itext7" Version="7.2.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
@@ -29,6 +22,15 @@
     <Folder Include="AppServices\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\CMC\Aspose\cmc.ts.3rds-master\CMC.TS.3rd.Aspose\libs\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\CMC\Aspose\cmc.ts.3rds-master\CMC.TS.3rd.Aspose\libs\Aspose.Words.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
