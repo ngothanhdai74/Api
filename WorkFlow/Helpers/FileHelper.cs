@@ -9,7 +9,7 @@ namespace WorkFlow.Helpers
 {
     public static class FileHelper
     {
-        public static string PdfToFullText(Stream stream)
+        public static string PdfToFullText(this Stream stream)
         {
             string fullText = "";
             var pdfDocument = new PdfDocument(new PdfReader(stream));
@@ -23,10 +23,14 @@ namespace WorkFlow.Helpers
             pdfDocument.Close();
             return fullText;
         }
-        public static string WordToFullText(Stream stream)
+        public static string WordToFullText(this Stream stream)
         {
             try
             {
+                var wrdf = new Document(@"C:\Users\User\source\repos\Api\WorkFlow\dait-test.docx");
+
+                wrdf.Save(@"C:\Users\User\source\repos\Api\WorkFlow\dait-test.docx", Aspose.Words.SaveFormat.Pdf);
+
                 //StringBuilder sResult = new StringBuilder();
                 //Aspose.Words.LoadOptions options = new Aspose.Words.LoadOptions();
                 //options.LoadFormat = Aspose.Words.LoadFormat.Auto;

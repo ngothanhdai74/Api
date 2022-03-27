@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WorkFlow.Helpers;
 
 namespace WorkFlow.Controllers
 {
@@ -17,14 +18,20 @@ namespace WorkFlow.Controllers
         [HttpPost]
         public IActionResult Upload(IFormFile file)
         {
-
-            using (var ms = new MemoryStream())
+            try
             {
-                file.CopyTo(ms);
-                var fileBytes = ms.ToArray();
-
-
                 
+                using (var ms = new MemoryStream())
+                {
+
+                    file.CopyTo(ms);
+
+                    var ress = ms.WordToFullText();
+
+                }
+            }
+            catch (Exception ex)
+            {
             }
             return Ok();
         }
