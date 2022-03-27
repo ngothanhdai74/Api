@@ -1,5 +1,5 @@
 ﻿
-using Aspose.Words;
+using System.Text;
 
 namespace WorkFlow.Helpers
 {
@@ -24,12 +24,12 @@ namespace WorkFlow.Helpers
         {
             try
             {
-                var wrdf = new Document(@"C:\Users\User\source\repos\Api\WorkFlow\FilesTest\dait-test.docx");
+                //var wrdf = new Document(@"C:\Users\User\source\repos\Api\WorkFlow\FilesTest\dait-test.docx");
 
-                wrdf.Save(@"C:\Users\User\source\repos\Api\WorkFlow\FilesTest\dait-test.pdf", Aspose.Words.SaveFormat.Pdf);
+                //var res = wrdf.Save(@"C:\Users\User\source\repos\Api\WorkFlow\FilesTest\dait-test.pdf", Aspose.Words.SaveFormat.Pdf);
 
                 //StringBuilder sResult = new StringBuilder();
-                //Aspose.Words.LoadOptions options = new Aspose.Words.LoadOptions();
+                //LoadOptions options = new Aspose.Words.LoadOptions();
                 //options.LoadFormat = Aspose.Words.LoadFormat.Auto;
                 //Document doc = new Document(stream, options);
                 //NodeCollection nodes = doc.GetChildNodes(NodeType.Paragraph, true);

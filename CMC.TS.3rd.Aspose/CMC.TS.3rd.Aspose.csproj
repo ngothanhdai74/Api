@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>CMC.TS._3rd.Aspose</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="libs\Aspose.Cells.dll" />
+		<None Remove="libs\Aspose.Words.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="libs\Aspose.Cells.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>true</Pack>
+			<PackagePath>lib\$(TargetFramework)</PackagePath>
+		</Content>
+		<Content Include="libs\Aspose.Words.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>true</Pack>
+			<PackagePath>lib\$(TargetFramework)</PackagePath>
+		</Content>
+	</ItemGroup>
+
+</Project>

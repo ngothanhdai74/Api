@@ -25,12 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Aspose.Cells">
-      <HintPath>..\..\CMC\Aspose\cmc.ts.3rds-master\CMC.TS.3rd.Aspose\libs\Aspose.Cells.dll</HintPath>
-    </Reference>
-    <Reference Include="Aspose.Words">
-      <HintPath>..\..\CMC\Aspose\cmc.ts.3rds-master\CMC.TS.3rd.Aspose\libs\Aspose.Words.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\CMC.TS.3rd.Aspose\CMC.TS.3rd.Aspose.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
 </Project>
