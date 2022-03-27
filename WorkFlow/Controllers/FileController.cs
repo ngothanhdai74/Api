@@ -15,9 +15,17 @@ namespace WorkFlow.Controllers
         }
 
         [HttpPost]
-        public IActionResult Get()
+        public IActionResult Upload(IFormFile file)
         {
-            
+
+            using (var ms = new MemoryStream())
+            {
+                file.CopyTo(ms);
+                var fileBytes = ms.ToArray();
+
+
+                
+            }
             return Ok();
         }
     }
