@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="AppServices\" />
-    <Folder Include="FilesTest\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>
