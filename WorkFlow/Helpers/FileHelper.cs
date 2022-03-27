@@ -29,7 +29,7 @@ namespace WorkFlow.Helpers
             {
                 var wrdf = new Document(@"C:\Users\User\source\repos\Api\WorkFlow\dait-test.docx");
 
-                wrdf.Save(@"C:\Users\User\source\repos\Api\WorkFlow\dait-test.docx", Aspose.Words.SaveFormat.Pdf);
+                wrdf.Save(@"C:\Users\User\source\repos\Api\WorkFlow\dait-test.pdf", Aspose.Words.SaveFormat.Pdf);
 
                 //StringBuilder sResult = new StringBuilder();
                 //Aspose.Words.LoadOptions options = new Aspose.Words.LoadOptions();
