@@ -22,9 +22,9 @@ namespace WorkFlow.Controllers
                 {
                     file.CopyTo(memory);
 
-                    Aspose.Words.Document document = new Aspose.Words.Document(memory);
+                    var document = new Aspose.Words.Document(memory);
 
-                    var res = document.Save(@"C:\Users\User\source\repos\Api\WorkFlow\FilesTest\dai.pdf", Aspose.Words.SaveFormat.Pdf);
+                    var res = document.Save(@"C:\Users\User\source\repos\Api\WorkFlow\Logs\dai.pdf", Aspose.Words.SaveFormat.Pdf);
 
                 }
             }
