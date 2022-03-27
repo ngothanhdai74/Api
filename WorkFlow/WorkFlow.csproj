@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CMC.TS.3rd.Aspose" Version="1.0.0.3" />
     <PackageReference Include="EasyNetQ" Version="6.3.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
@@ -20,12 +21,12 @@
 
   <ItemGroup>
     <Folder Include="AppServices\" />
+    <Folder Include="FilesTest\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CMC.TS.3rd.Aspose\CMC.TS.3rd.Aspose.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 

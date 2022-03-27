@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using WorkFlow.Helpers;
-
+﻿using Microsoft.AspNetCore.Mvc;
 namespace WorkFlow.Controllers
 {
     [Route("[controller]")]
@@ -21,12 +18,13 @@ namespace WorkFlow.Controllers
             try
             {
                 
-                using (var ms = new MemoryStream())
+                using (var memory = new MemoryStream())
                 {
+                    file.CopyTo(memory);
 
-                    file.CopyTo(ms);
+                    Aspose.Words.Document document = new Aspose.Words.Document(memory);
 
-                    var ress = ms.WordToFullText();
+                    var res = document.Save(@"C:\Users\User\source\repos\Api\WorkFlow\FilesTest\dai.pdf", Aspose.Words.SaveFormat.Pdf);
 
                 }
             }
