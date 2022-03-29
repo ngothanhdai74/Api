@@ -20,6 +20,9 @@ namespace UnitTest.AutoTest
         public void TestEdoc()
         {
             _driver.Navigate().GoToUrl("https://edoctc.mof.gov.vn");
+            _driver.FindElement(By.Id("User")).SendKeys("Nguyenthihuongtra");
+            _driver.FindElement(By.Name("Password")).SendKeys("Trong@12345");
+            _driver.FindElement(By.ClassName("login-button")).Click();
         }
     }
 }
