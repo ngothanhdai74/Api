@@ -15,7 +15,12 @@ namespace DataAccess.Databases
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseOracle(Configuration.GetConnectionString("MsSqlConnection"));
+            options.UseSqlServer(
+                Configuration.GetConnectionString("MsSqlConnection"),
+                providerOptions => {
+                    providerOptions.EnableRetryOnFailure();
+                }
+            );
         }
     }
 }
