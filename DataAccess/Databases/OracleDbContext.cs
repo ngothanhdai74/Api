@@ -15,8 +15,8 @@ namespace DataAccess.Databases
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            var connectionString = @"DATA SOURCE=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.162.113.140)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=PDB1)));USER ID=ED_TEST; Password=Davidkmhd!1;";
-            connectionString = Configuration.GetConnectionString("DatabaseOptions:ConnectionStrings:Oracle");
+            //var connectionString = @"DATA SOURCE=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.162.113.140)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=PDB1)));USER ID=ED_TEST; Password=Davidkmhd!1;";
+            var connectionString = Configuration["DatabaseOptions:ConnectionStrings:Oracle"];
             options.UseOracle(connectionString);
         }
     }
