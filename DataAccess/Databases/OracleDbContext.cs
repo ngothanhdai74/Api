@@ -15,7 +15,7 @@ namespace DataAccess.Databases
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseOracle(Configuration.GetConnectionString("OracleConnection"));
+            options.UseOracle(Configuration.GetConnectionString("DatabaseOptions:ConnectionStrings:Oracle"));
         }
     }
 }

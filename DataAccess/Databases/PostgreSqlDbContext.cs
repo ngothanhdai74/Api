@@ -15,7 +15,7 @@ namespace DataAccess.Databases
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseNpgsql(Configuration.GetConnectionString("PostgreConnection"));
+            options.UseNpgsql(Configuration.GetConnectionString("DatabaseOptions:ConnectionStrings:PostgreSQL"));
         }
     }
 }
