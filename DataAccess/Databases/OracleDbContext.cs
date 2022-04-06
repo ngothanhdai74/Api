@@ -16,7 +16,7 @@ namespace DataAccess.Databases
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             var connectionString = Configuration["DatabaseOptions:ConnectionStrings:Oracle"];
-            options.UseOracle(connectionString).UseUpperCaseNamingConvention();
+            options.UseOracle(connectionString).UseUpperSnakeCaseNamingConvention();
         }
     }
 }
