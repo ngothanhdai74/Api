@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Databases
 {
+    // Add-Migration InitialDbMsSql -Context MsSqlDbContext -OutputDir Data\Migrations\MsSql
+
     public abstract class WorkflowDbContext : DbContext
     {
         protected readonly IConfiguration Configuration;
