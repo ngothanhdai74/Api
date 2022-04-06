@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table(nameof(ToDoList))]
     public class ToDoList
     {
         [Key]
