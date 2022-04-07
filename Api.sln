@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire", "Hangfire\Hangfire.csproj", "{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService", "WorkerService\WorkerService.csproj", "{638B37EA-EECA-424A-9F81-4116406A6F14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638B37EA-EECA-424A-9F81-4116406A6F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638B37EA-EECA-424A-9F81-4116406A6F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638B37EA-EECA-424A-9F81-4116406A6F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638B37EA-EECA-424A-9F81-4116406A6F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
