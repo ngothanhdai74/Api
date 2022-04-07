@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkFlow", "WorkFlow\WorkFlow.csproj", "{B3E4DE18-8687-447B-A129-5F07A38C88E6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{D76391E5-135C-4EB9-8797-43A172279A09}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{700B8C43-A0AC-4A56-8487-5FD37018AD19}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire", "Hangfire\Hangfire.csproj", "{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService", "WorkerService\WorkerService.csproj", "{638B37EA-EECA-424A-9F81-4116406A6F14}"
 EndProject
@@ -19,22 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3E4DE18-8687-447B-A129-5F07A38C88E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D76391E5-135C-4EB9-8797-43A172279A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D76391E5-135C-4EB9-8797-43A172279A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D76391E5-135C-4EB9-8797-43A172279A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D76391E5-135C-4EB9-8797-43A172279A09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{700B8C43-A0AC-4A56-8487-5FD37018AD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{700B8C43-A0AC-4A56-8487-5FD37018AD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{700B8C43-A0AC-4A56-8487-5FD37018AD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{700B8C43-A0AC-4A56-8487-5FD37018AD19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97FB728A-AB93-4D55-8FEB-9C7634C2FCBA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{638B37EA-EECA-424A-9F81-4116406A6F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{638B37EA-EECA-424A-9F81-4116406A6F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{638B37EA-EECA-424A-9F81-4116406A6F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
