@@ -4,12 +4,12 @@ namespace Catalog.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CommonController : ControllerBase
+    public class StockController : ControllerBase
     {
 
-        private readonly ILogger<CommonController> _logger;
+        private readonly ILogger<StockController> _logger;
 
-        public CommonController(ILogger<CommonController> logger)
+        public StockController(ILogger<StockController> logger)
         {
             _logger = logger;
         }
