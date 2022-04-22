@@ -1,3 +1,4 @@
+using Catalog.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog.Controllers
@@ -17,6 +18,7 @@ namespace Catalog.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            var file = FileExtensions.Zip(@"D:\Templates");
             return Ok();
         }
     }
