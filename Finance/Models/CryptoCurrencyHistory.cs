@@ -1,8 +1,9 @@
 ﻿namespace Finance.Models
 {
-    public class StockHistory
+    public class CryptoCurrencyHistory
     {
-        public string Code { get; set; }
+        public long Id { get; set; }
+        public string CryptoCurrencyCode { get; set; }
         public double Price { get; set; }
         public DateTime TimeStamp { get; set; }
         public long Year { get; set; }
