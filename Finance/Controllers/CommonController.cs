@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace FinanceService.Controllers
+namespace Finance.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -13,7 +13,7 @@ namespace FinanceService.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "GetWeatherForecast")]
         public IActionResult Get()
         {
             return Ok();

@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["FinanceService/FinanceService.csproj", "FinanceService/"]
-RUN dotnet restore "FinanceService/FinanceService.csproj"
+COPY ["LifeStyle/LifeStyle.csproj", "LifeStyle/"]
+RUN dotnet restore "LifeStyle/LifeStyle.csproj"
 COPY . .
-WORKDIR "/src/FinanceService"
-RUN dotnet build "FinanceService.csproj" -c Release -o /app/build
+WORKDIR "/src/LifeStyle"
+RUN dotnet build "LifeStyle.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FinanceService.csproj" -c Release -o /app/publish
+RUN dotnet publish "LifeStyle.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FinanceService.dll"]
+ENTRYPOINT ["dotnet", "LifeStyle.dll"]
