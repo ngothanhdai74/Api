@@ -4,16 +4,16 @@ namespace Config.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class CommonController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<CommonController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public CommonController(ILogger<CommonController> logger)
         {
             _logger = logger;
         }
