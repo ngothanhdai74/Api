@@ -75,18 +75,35 @@ namespace Finance.Infrastructure
             string startFolder = configuration.GetValue<string>(StartFolderConfig);
             string sourceFile = Path.Combine(startFolder, sourceFilePath);
             string destFile = Path.Combine(startFolder, destinationFilePath);
+            File.Copy(sourceFile, destFile, true);
         }
-        public static void MoveFile(
+        public static void MoveFileOrFolder(
+            this IConfiguration configuration,
+            string sourcePath,
+            string destinationPath,
+            bool isMoveFile = false
+            )
+        {
+            string startFolder = configuration.GetValue<string>(StartFolderConfig);
+            string source = Path.Combine(startFolder, sourcePath);
+            string destination = Path.Combine(startFolder, destinationPath);
+            if(isMoveFile) File.Move(source, destination);
+            else Directory.Move(source, destination);
+        } 
+        public static void DeleteFile(
+            this IConfiguration configuration,
+            string path
+            )
+        {
+            string startFolder = configuration.GetValue<string>(StartFolderConfig);
+            string fullFile = Path.Combine(startFolder, path);
+            File.Delete(fullFile);
+        }
+        public static void Test(
             this IConfiguration configuration
             )
         {
             string startFolder = configuration.GetValue<string>(StartFolderConfig);
-        }
-        public static void DeleteFile(
-            this IConfiguration configuration
-            )
-        {
-            string startFolder = configuration.GetValue<string>("LocationRoot");
 
             DirectoryInfo dir = new DirectoryInfo(startFolder);
 
