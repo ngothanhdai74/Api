@@ -99,7 +99,7 @@ namespace Finance.Infrastructure
             string fullFile = Path.Combine(startFolder, path);
             File.Delete(fullFile);
         }
-        public static void Test(
+        public static void Test<T>(
             this IConfiguration configuration
             )
         {
@@ -114,6 +114,13 @@ namespace Finance.Infrastructure
             where file.Extension == ".txt"
             orderby file.Name
             select file;
+
+            //var queryMatchingFiles =
+            //from file in fileList
+            //where file.Extension == ".htm"
+            //let fileText = JsonSerializer.Deserialize<T>(file.FullName)
+            //where fileText.Contains(searchTerm)
+            //select file.FullName;
 
         }
     }
