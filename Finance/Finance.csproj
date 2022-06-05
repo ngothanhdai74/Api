@@ -13,10 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AppServices\" />
+    <Folder Include="Repositories\Caching\" />
+    <Folder Include="Repositories\Sql\" />
     <Folder Include="Utils\" />
-    <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
