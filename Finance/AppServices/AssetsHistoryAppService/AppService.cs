@@ -1,6 +1,6 @@
 ﻿namespace Finance.AppServices.AssetsHistoryAppService
 {
-    public class AppService
+    public class AppService : IAppService
     {
     }
 }

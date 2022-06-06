@@ -1,6 +1,6 @@
 ﻿namespace Finance.AppServices.CategoriesAppService
 {
-    public class AppService
+    public class AppService : IAppService
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Finance.AppServices.BondAppService
 {
-    public class AppService
+    public class AppService : IAppService
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Finance.AppServices.CryptoCurrencyAppService
 {
-    public class AppService
+    public class AppService : IAppService
     {
     }
 }

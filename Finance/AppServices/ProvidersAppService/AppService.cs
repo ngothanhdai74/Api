@@ -1,6 +1,6 @@
 ﻿namespace Finance.AppServices.ProvidersAppService
 {
-    public class AppService
+    public class AppService : IAppService
     {
     }
 }
