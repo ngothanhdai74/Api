@@ -1,4 +1,5 @@
 ﻿using Finance.Models.BizModels.Providers;
+using AutoMapper;
 
 namespace Finance.Repositories.FileStorage.ProvidersStorage
 {
@@ -6,9 +7,14 @@ namespace Finance.Repositories.FileStorage.ProvidersStorage
     {
         private readonly IConfiguration _configuration;
         private const string BaseFolder = "Providers";
-        public Storage(IConfiguration configuration)
+        private readonly IMapper _mapper;
+        public Storage(
+            IConfiguration configuration,
+            IMapper mapper
+            )
         {
             _configuration = configuration;
+            _mapper = mapper;
         }
         public async Task<View> Get(string code)
         {

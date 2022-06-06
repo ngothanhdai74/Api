@@ -1,4 +1,5 @@
 ﻿using Finance.Models.BizModels.StockHistory;
+using AutoMapper;
 
 namespace Finance.Repositories.FileStorage.StockHistoryStorage
 {
@@ -6,9 +7,14 @@ namespace Finance.Repositories.FileStorage.StockHistoryStorage
     {
         private readonly IConfiguration _configuration;
         private const string BaseFolder = "StockHistory";
-        public Storage(IConfiguration configuration)
+        private readonly IMapper _mapper;
+        public Storage(
+            IConfiguration configuration,
+            IMapper mapper
+            )
         {
             _configuration = configuration;
+            _mapper = mapper;
         }
         public async Task<View> Get(string code)
         {
