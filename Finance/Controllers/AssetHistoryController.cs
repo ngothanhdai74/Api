@@ -5,6 +5,13 @@ namespace Finance.Controllers
     [ApiController]
     public class AssetHistoryController : ControllerBase
     {
+        private readonly AppServices.AssetsHistoryAppService.IAppService _appService;
+        public AssetHistoryController(
+            AppServices.AssetsHistoryAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         [HttpGet]
         public IEnumerable<string> Get()
         {

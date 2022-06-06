@@ -5,6 +5,13 @@ namespace Finance.Controllers
     [ApiController]
     public class TransactionController : ControllerBase
     {
+        private readonly AppServices.TransactionAppService.IAppService _appService;
+        public TransactionController(
+            AppServices.TransactionAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         [HttpGet]
         public IEnumerable<string> Get()
         {

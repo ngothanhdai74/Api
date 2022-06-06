@@ -5,6 +5,13 @@ namespace Finance.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        private readonly AppServices.CategoriesAppService.IAppService _appService;
+        public CategoryController(
+            AppServices.CategoriesAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         [HttpGet]
         public IEnumerable<string> Get()
         {

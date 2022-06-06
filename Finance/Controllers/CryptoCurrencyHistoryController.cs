@@ -5,6 +5,13 @@ namespace Finance.Controllers
     [ApiController]
     public class CryptoCurrencyHistoryController : ControllerBase
     {
+        private readonly AppServices.CryptoCurrencyHistoryAppService.IAppService _appService;
+        public CryptoCurrencyHistoryController(
+            AppServices.CryptoCurrencyHistoryAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         [HttpGet]
         public IEnumerable<string> Get()
         {

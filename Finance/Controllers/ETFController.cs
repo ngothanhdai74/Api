@@ -8,6 +8,13 @@ namespace Finance.Controllers
     [ApiController]
     public class ETFController : ControllerBase
     {
+        private readonly AppServices.ETFAppService.IAppService _appService;
+        public ETFController(
+            AppServices.ETFAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         // GET: api/<ETFController>
         [HttpGet]
         public IEnumerable<string> Get()

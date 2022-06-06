@@ -5,6 +5,13 @@ namespace Finance.Controllers
     [ApiController]
     public class BondController : ControllerBase
     {
+        private readonly AppServices.BondAppService.IAppService _appService;
+        public BondController(
+            AppServices.BondAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         [HttpGet]
         public IEnumerable<string> Get()
         {

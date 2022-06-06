@@ -5,6 +5,13 @@ namespace Finance.Controllers
     [ApiController]
     public class ProvidersController : ControllerBase
     {
+        private readonly AppServices.ProvidersAppService.IAppService _appService;
+        public ProvidersController(
+            AppServices.ProvidersAppService.IAppService appService
+            )
+        {
+            _appService = appService;
+        }
         [HttpGet]
         public IEnumerable<string> Get()
         {
