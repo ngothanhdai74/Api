@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Finance.Models.BizModels.Transaction;
+
 namespace Finance.Controllers
 {
     [Route("api/[controller]/[action]")]
@@ -13,26 +15,69 @@ namespace Finance.Controllers
             _appService = appService;
         }
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Filter([FromBody] Filter model)
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                var response = await _appService.Filter(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{code}")]
+        public async Task<IActionResult> Get(string code)
         {
-            return "value";
+            try
+            {
+                var response = await _appService.Get(code);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] New model)
         {
+            try
+            {
+                var response = await _appService.Post(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] Edit model)
         {
+            try
+            {
+                var response = await _appService.Put(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{code}")]
+        public async Task<IActionResult> Delete(string code)
         {
+            try
+            {
+                var response = await _appService.Delete(code);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

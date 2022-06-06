@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using Finance.Models.BizModels.ETF;
 
 namespace Finance.Controllers
 {
@@ -15,36 +14,70 @@ namespace Finance.Controllers
         {
             _appService = appService;
         }
-        // GET: api/<ETFController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> Filter([FromBody] Filter model)
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                var response = await _appService.Filter(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-
-        // GET api/<ETFController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{code}")]
+        public async Task<IActionResult> Get(string code)
         {
-            return "value";
+            try
+            {
+                var response = await _appService.Get(code);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-
-        // POST api/<ETFController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post([FromBody] New model)
         {
+            try
+            {
+                var response = await _appService.Post(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-
-        // PUT api/<ETFController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] Edit model)
         {
+            try
+            {
+                var response = await _appService.Put(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
-
-        // DELETE api/<ETFController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{code}")]
+        public async Task<IActionResult> Delete(string code)
         {
+            try
+            {
+                var response = await _appService.Delete(code);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
