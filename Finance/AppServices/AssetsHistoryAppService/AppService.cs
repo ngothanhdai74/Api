@@ -5,9 +5,15 @@ namespace Finance.AppServices.AssetsHistoryAppService
     public class AppService : IAppService
     {
         private readonly IMapper _mapper;
-        public AppService(IMapper mapper)
+        private readonly Services.AssetService.IService _assetService;
+
+        public AppService(
+            IMapper mapper,
+            Services.AssetService.IService assetService
+            )
         {
             _mapper = mapper;
+            _assetService = assetService;
         }
     }
 }
