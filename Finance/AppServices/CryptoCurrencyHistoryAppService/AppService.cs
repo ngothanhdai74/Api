@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Finance.Models.BizModels.CryptoCurrencyHistory;
 
 namespace Finance.AppServices.CryptoCurrencyHistoryAppService
 {
@@ -14,6 +15,26 @@ namespace Finance.AppServices.CryptoCurrencyHistoryAppService
         {
             _mapper = mapper;
             _assetService = assetService;
+        }
+        public async Task<View> Get(string code)
+        {
+            return default;
+        }
+        public async Task<IList<List>> Filter(Filter model)
+        {
+            return default;
+        }
+        public async Task<View> Post(New model)
+        {
+            return default;
+        }
+        public async Task<View> Put(Edit model)
+        {
+            return default;
+        }
+        public async Task<View> Delete(string code)
+        {
+            return default;
         }
     }
 }
