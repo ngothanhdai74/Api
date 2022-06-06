@@ -1,6 +1,6 @@
 ﻿namespace Finance.Repositories.FileStorage.AssetStorage
 {
-    public class Storage
+    public class Storage : IStorage
     {
     }
 }

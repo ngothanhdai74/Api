@@ -1,6 +1,6 @@
 ﻿namespace Finance.Repositories.FileStorage.StockHistoryStorage
 {
-    public class Storage
+    public class Storage : IStorage
     {
     }
 }
