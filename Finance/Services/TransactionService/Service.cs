@@ -1,6 +1,6 @@
 ﻿namespace Finance.Services.TransactionService
 {
-    public class Service
+    public class Service : IService
     {
     }
 }

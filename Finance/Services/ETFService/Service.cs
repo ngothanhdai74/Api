@@ -1,6 +1,6 @@
 ﻿namespace Finance.Services.ETFService
 {
-    public class Service
+    public class Service : IService
     {
     }
 }

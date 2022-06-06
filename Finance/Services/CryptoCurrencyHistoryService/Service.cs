@@ -1,6 +1,6 @@
 ﻿namespace Finance.Services.CryptoCurrencyHistoryService
 {
-    public class Service
+    public class Service : IService
     {
     }
 }

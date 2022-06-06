@@ -1,6 +1,6 @@
 ﻿namespace Finance.Services.StockHistoryService
 {
-    public class Service
+    public class Service : IService
     {
     }
 }
