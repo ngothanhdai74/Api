@@ -1,6 +1,6 @@
 ﻿namespace Finance.Models.BizModels.CryptoCurrencyHistory
 {
-    public class Request
+    public class Filter
     {
     }
 }

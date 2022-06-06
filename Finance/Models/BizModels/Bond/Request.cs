@@ -1,6 +1,6 @@
 ﻿namespace Finance.Models.BizModels.Bond
 {
-    public class Request
+    public class Filter
     {
     }
 }

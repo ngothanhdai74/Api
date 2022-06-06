@@ -1,6 +1,6 @@
 ﻿namespace Finance.Models.BizModels.Transaction
 {
-    public class Request
+    public class Filter
     {
     }
 }

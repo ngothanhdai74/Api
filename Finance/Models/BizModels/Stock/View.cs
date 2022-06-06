@@ -3,4 +3,7 @@
     public class View
     {
     }
+    public class List
+    {
+    }
 }

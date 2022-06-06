@@ -1,6 +1,6 @@
 ﻿namespace Finance.Models.BizModels.Stock
 {
-    public class Request
+    public class Filter
     {
     }
 }
