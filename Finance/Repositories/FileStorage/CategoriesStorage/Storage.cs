@@ -47,7 +47,7 @@ namespace Finance.Repositories.FileStorage.CategoriesStorage
                 (filter.Status.HasValue && filter.Status.Value == category.Status)
             select category;
 
-            return default;
+            return categories.GetPageAsync<Categories, List>(_mapper, filter.Page, filter.PageSize);
         }
         public async Task<View> Post(New model)
         {

@@ -49,13 +49,17 @@ namespace Finance.Infrastructure
         public static PagedResult<TDestination> GetPageAsync<TSource, TDestination>(
             this IEnumerable<TSource> dataSource,
             IMapper mapper,
-            int page, 
-            int pageSize
+            int? page, 
+            int? pageSize
             )
         {
             var result = new PagedResult<TDestination>();
             result.RowCount = dataSource.Count();
-            dataSource = dataSource.Skip((page - 1) * pageSize).Take(pageSize);
+            if (page.HasValue && pageSize.HasValue)
+            {
+                dataSource = dataSource.Skip((page.Value - 1) * pageSize.Value).Take(pageSize.Value);
+
+            }
             result.Results = mapper.Map<IList<TDestination>>(dataSource);
             return result;
         }
