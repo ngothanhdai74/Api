@@ -55,6 +55,20 @@ namespace Finance.Infrastructure
             }
             return folderPath;
         }
+        public static bool IsExistFile(
+            this IConfiguration configuration,
+            string filePath,
+            params string[] folders
+            )
+        {
+            string folderPath = configuration.GetValue<string>(StartFolderConfig);
+            foreach (var folder in folders)
+            {
+                folderPath = Path.Combine(folderPath, folder);
+            }
+            folderPath = Path.Combine(folderPath, filePath);
+            return Directory.Exists(folderPath);
+        }
         public static void SaveFile<T>(
             this IConfiguration configuration,
             string fileName,
@@ -92,36 +106,17 @@ namespace Finance.Infrastructure
         } 
         public static void DeleteFile(
             this IConfiguration configuration,
-            string path
+            string filePath,
+            params string[] folders
             )
         {
             string startFolder = configuration.GetValue<string>(StartFolderConfig);
-            string fullFile = Path.Combine(startFolder, path);
-            File.Delete(fullFile);
-        }
-        public static void Test<T>(
-            this IConfiguration configuration
-            )
-        {
-            string startFolder = configuration.GetValue<string>(StartFolderConfig);
-
-            DirectoryInfo dir = new DirectoryInfo(startFolder);
-
-            IEnumerable<FileInfo> fileList = dir.GetFiles("*.*", SearchOption.AllDirectories);
-
-            IEnumerable<System.IO.FileInfo> fileQuery =
-            from file in fileList
-            where file.Extension == ".txt"
-            orderby file.Name
-            select file;
-
-            //var queryMatchingFiles =
-            //from file in fileList
-            //where file.Extension == ".htm"
-            //let fileText = JsonSerializer.Deserialize<T>(file.FullName)
-            //where fileText.Contains(searchTerm)
-            //select file.FullName;
-
+            foreach (var folder in folders)
+            {
+                startFolder = Path.Combine(startFolder, folder);
+            }
+            startFolder = Path.Combine(startFolder, filePath);
+            File.Delete(startFolder);
         }
     }
 }

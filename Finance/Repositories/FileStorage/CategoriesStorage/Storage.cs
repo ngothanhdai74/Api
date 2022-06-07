@@ -51,14 +51,29 @@ namespace Finance.Repositories.FileStorage.CategoriesStorage
         }
         public async Task<View> Post(New model)
         {
+            if(model == null || string.IsNullOrEmpty(model.Code))
+            {
+                return default;
+            }
+            if(FileHelper.IsExistFile(_configuration, $"{model.Code}.json", BaseFolder))
+            {
+                return default;
+            }
+            FileHelper.SaveFile(_configuration, $"{model.Code}.json", model, BaseFolder);
             return default;
         }
         public async Task<View> Put(Edit model)
         {
+            if (model == null || string.IsNullOrEmpty(model.Code))
+            {
+                return default;
+            }
+            FileHelper.SaveFile(_configuration, $"{model.Code}.json", model, BaseFolder);
             return default;
         }
         public async Task<View> Delete(string code)
         {
+            FileHelper.DeleteFile(_configuration, $"{code}.json", BaseFolder);
             return default;
         }
     }
