@@ -33,17 +33,17 @@ namespace Finance.Infrastructure
             services.AddTransient<Services.StockService.IService, Services.StockService.Service>();
             services.AddTransient<Services.TransactionService.IService, Services.TransactionService.Service>();
             // AppService
-            services.AddTransient<AppServices.AssetAppService.AppService, AppServices.AssetAppService.AppService>();
-            services.AddTransient<AppServices.AssetsHistoryAppService.AppService, AppServices.AssetsHistoryAppService.AppService>();
-            services.AddTransient<AppServices.BondAppService.AppService, AppServices.BondAppService.AppService>();
-            services.AddTransient<AppServices.CategoriesAppService.AppService, AppServices.CategoriesAppService.AppService>();
-            services.AddTransient<AppServices.CryptoCurrencyAppService.AppService, AppServices.CryptoCurrencyAppService.AppService>();
-            services.AddTransient<AppServices.CryptoCurrencyHistoryAppService.AppService, AppServices.CryptoCurrencyHistoryAppService.AppService>();
-            services.AddTransient<AppServices.ETFAppService.AppService, AppServices.ETFAppService.AppService>();
-            services.AddTransient<AppServices.ProvidersAppService.AppService, AppServices.ProvidersAppService.AppService>();
-            services.AddTransient<AppServices.StockAppService.AppService, AppServices.StockAppService.AppService>();
-            services.AddTransient<AppServices.StockHistoryAppService.AppService, AppServices.StockHistoryAppService.AppService>();
-            services.AddTransient<AppServices.TransactionAppService.AppService, AppServices.TransactionAppService.AppService>();
+            services.AddTransient<AppServices.AssetAppService.IAppService, AppServices.AssetAppService.AppService>();
+            services.AddTransient<AppServices.AssetsHistoryAppService.IAppService, AppServices.AssetsHistoryAppService.AppService>();
+            services.AddTransient<AppServices.BondAppService.IAppService, AppServices.BondAppService.AppService>();
+            services.AddTransient<AppServices.CategoriesAppService.IAppService, AppServices.CategoriesAppService.AppService>();
+            services.AddTransient<AppServices.CryptoCurrencyAppService.IAppService, AppServices.CryptoCurrencyAppService.AppService>();
+            services.AddTransient<AppServices.CryptoCurrencyHistoryAppService.IAppService, AppServices.CryptoCurrencyHistoryAppService.AppService>();
+            services.AddTransient<AppServices.ETFAppService.IAppService, AppServices.ETFAppService.AppService>();
+            services.AddTransient<AppServices.ProvidersAppService.IAppService, AppServices.ProvidersAppService.AppService>();
+            services.AddTransient<AppServices.StockAppService.IAppService, AppServices.StockAppService.AppService>();
+            services.AddTransient<AppServices.StockHistoryAppService.IAppService, AppServices.StockHistoryAppService.AppService>();
+            services.AddTransient<AppServices.TransactionAppService.IAppService, AppServices.TransactionAppService.AppService>();
         }
 
         public static PagedResult<TDestination> GetPageAsync<TSource, TDestination>(
