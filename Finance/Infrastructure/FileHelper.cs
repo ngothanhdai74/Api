@@ -67,7 +67,7 @@ namespace Finance.Infrastructure
                 folderPath = Path.Combine(folderPath, folder);
             }
             folderPath = Path.Combine(folderPath, filePath);
-            return Directory.Exists(folderPath);
+            return File.Exists(folderPath);
         }
         public static void SaveFile<T>(
             this IConfiguration configuration,
