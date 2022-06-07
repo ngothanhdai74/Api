@@ -13,7 +13,7 @@ namespace Finance.Controllers
         {
             _appService = appService;
         }
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> Filter([FromBody] Filter model)
         {
             try

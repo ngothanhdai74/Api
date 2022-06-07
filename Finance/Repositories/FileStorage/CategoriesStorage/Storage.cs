@@ -39,14 +39,26 @@ namespace Finance.Repositories.FileStorage.CategoriesStorage
             var categories =
             from file in fileList
             let category = JsonSerializer.Deserialize<Categories>(File.ReadAllText(file.FullName))
-            where 
-                (!string.IsNullOrEmpty(filter.Code) && category.Code.Equals(filter.Code)) &&
-                (!string.IsNullOrEmpty(filter.ParentCode) && category.ParentCode.Equals(filter.ParentCode)) &&
-                (!string.IsNullOrEmpty(filter.Name) && category.Name.ToLower().Contains(filter.Name.ToLower())) &&
-                (filter.Type.HasValue && filter.Type.Value == category.Type) &&
-                (filter.Status.HasValue && filter.Status.Value == category.Status)
+            //where 
+            //    (!string.IsNullOrEmpty(filter.Code) && category.Code.Equals(filter.Code)) &&
+            //    (!string.IsNullOrEmpty(filter.ParentCode) && category.ParentCode.Equals(filter.ParentCode)) &&
+            //    (!string.IsNullOrEmpty(filter.Name) && category.Name.ToLower().Contains(filter.Name.ToLower())) &&
+            //    (filter.Type.HasValue && filter.Type.Value == category.Type) &&
+            //    (filter.Status.HasValue && filter.Status.Value == category.Status)
             select category;
 
+            if(!string.IsNullOrEmpty(filter.Code))
+            {
+                categories = categories.Where(c => c.Code.ToLower().Equals(filter.Code.ToLower())).ToList();
+            }
+            if (!string.IsNullOrEmpty(filter.ParentCode))
+            {
+                categories = categories.Where(c => c.ParentCode.ToLower().Equals(filter.ParentCode.ToLower())).ToList();
+            }
+            if (!string.IsNullOrEmpty(filter.Name))
+            {
+                categories = categories.Where(c => c.Name.ToLower().Contains(filter.Name.ToLower())).ToList();
+            }
             return categories.GetPageAsync<Categories, List>(_mapper, filter.Page, filter.PageSize);
         }
         public async Task<View> Post(New model)
