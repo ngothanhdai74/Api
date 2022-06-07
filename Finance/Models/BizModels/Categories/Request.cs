@@ -9,7 +9,7 @@
         public string TypeName { get; set; }
         public long? Status { get; set; }
         public string StatusName { get; set; }
-        public int Page { get; set; }
-        public int PageSize { get; set; }
+        public int? Page { get; set; }
+        public int? PageSize { get; set; }
     }
 }

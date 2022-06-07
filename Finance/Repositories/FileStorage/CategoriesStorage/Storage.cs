@@ -35,10 +35,9 @@ namespace Finance.Repositories.FileStorage.CategoriesStorage
 
             IEnumerable<FileInfo> fileList = dir.GetFiles("*.*", SearchOption.AllDirectories);
 
-
             var categories =
             from file in fileList
-            let category = JsonSerializer.Deserialize<Categories>(file.FullName)
+            let category = JsonSerializer.Deserialize<Categories>(File.ReadAllText(file.FullName))
             where 
                 (!string.IsNullOrEmpty(filter.Code) && category.Code.Equals(filter.Code)) &&
                 (!string.IsNullOrEmpty(filter.ParentCode) && category.ParentCode.Equals(filter.ParentCode)) &&
