@@ -1,4 +1,6 @@
-﻿namespace Finance.Infrastructure
+﻿using AutoMapper;
+using Finance.Models.Common;
+namespace Finance.Infrastructure
 {
     public static class Extensions
     {
@@ -42,6 +44,20 @@
             services.AddTransient<AppServices.StockAppService.AppService, AppServices.StockAppService.AppService>();
             services.AddTransient<AppServices.StockHistoryAppService.AppService, AppServices.StockHistoryAppService.AppService>();
             services.AddTransient<AppServices.TransactionAppService.AppService, AppServices.TransactionAppService.AppService>();
+        }
+
+        public static PagedResult<TDestination> GetPageAsync<TSource, TDestination>(
+            this IEnumerable<TSource> dataSource,
+            IMapper mapper,
+            int page, 
+            int pageSize
+            )
+        {
+            var result = new PagedResult<TDestination>();
+            result.RowCount = dataSource.Count();
+            dataSource = dataSource.Skip((page - 1) * pageSize).Take(pageSize);
+            result.Results = mapper.Map<IList<TDestination>>(dataSource);
+            return result;
         }
     }
 }
