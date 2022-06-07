@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Finance.Models.BizModels.Categories;
+using Finance.Models.Common;
 
 namespace Finance.AppServices.CategoriesAppService
 {
@@ -21,7 +22,7 @@ namespace Finance.AppServices.CategoriesAppService
             var result = await _service.Get(code);
             return result;
         }
-        public async Task<IList<List>> Filter(Filter model)
+        public async Task<PagedResult<List>> Filter(Filter model)
         {
             var result = await _service.Filter(model);
             return result;

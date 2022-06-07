@@ -3,6 +3,7 @@ using Finance.Models;
 using Finance.Models.BizModels.Categories;
 using AutoMapper;
 using System.Text.Json;
+using Finance.Models.Common;
 
 namespace Finance.Repositories.FileStorage.CategoriesStorage
 {
@@ -25,7 +26,7 @@ namespace Finance.Repositories.FileStorage.CategoriesStorage
             var result = _configuration.GetFile<Categories>(filePath);
             return _mapper.Map<View>(result);
         }
-        public async Task<IList<List>> Filter(Filter filter)
+        public async Task<PagedResult<List>> Filter(Filter filter)
         {
             string startFolder = _configuration.GetValue<string>(FileHelper.StartFolderConfig);
 

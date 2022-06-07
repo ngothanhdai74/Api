@@ -1,5 +1,6 @@
 ﻿using Finance.Repositories.FileStorage.CategoriesStorage;
 using Finance.Models.BizModels.Categories;
+using Finance.Models.Common;
 
 namespace Finance.Services.CategoriesService
 {
@@ -15,7 +16,7 @@ namespace Finance.Services.CategoriesService
             var result = await _storage.Get(code);
             return result;
         }
-        public async Task<IList<List>> Filter(Filter model)
+        public async Task<PagedResult<List>> Filter(Filter model)
         {
             var result = await _storage.Filter(model);
             return result;
