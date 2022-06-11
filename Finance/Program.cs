@@ -9,12 +9,22 @@ builder.Services.AddSwaggerGen(options =>
 });
 builder.Services.AddDependencyInjection();
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "_myAllowSpecificOrigins",
+                      policy =>
+                      {
+                          policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                      });
+});
+
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("_myAllowSpecificOrigins");
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
