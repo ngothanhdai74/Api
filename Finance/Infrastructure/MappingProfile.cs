@@ -16,11 +16,6 @@ namespace Finance.Infrastructure
             CreateMap<Models.BizModels.AssetsHistory.New, Models.AssetsHistory>();
             CreateMap<Models.AssetsHistory, Models.BizModels.AssetsHistory.View>();
             CreateMap<Models.AssetsHistory, Models.BizModels.AssetsHistory.List>();
-            // Bond
-            CreateMap<Models.BizModels.Bond.Edit, Models.Bond>();
-            CreateMap<Models.BizModels.Bond.New, Models.Bond>();
-            CreateMap<Models.Bond, Models.BizModels.Bond.View>();
-            CreateMap<Models.Bond, Models.BizModels.Bond.List>();
             // Categories
             CreateMap<Models.BizModels.Categories.Edit, Models.Categories>();
             CreateMap<Models.BizModels.Categories.New, Models.Categories>();
@@ -36,11 +31,6 @@ namespace Finance.Infrastructure
             CreateMap<Models.BizModels.CryptoCurrencyHistory.New, Models.CryptoCurrencyHistory>();
             CreateMap<Models.CryptoCurrencyHistory, Models.BizModels.CryptoCurrencyHistory.View>();
             CreateMap<Models.CryptoCurrencyHistory, Models.BizModels.CryptoCurrencyHistory.List>();
-            // ETF
-            CreateMap<Models.BizModels.ETF.Edit, Models.ETF>();
-            CreateMap<Models.BizModels.ETF.New, Models.ETF>();
-            CreateMap<Models.ETF, Models.BizModels.ETF.View>();
-            CreateMap<Models.ETF, Models.BizModels.ETF.List>();
             // Providers
             CreateMap<Models.BizModels.Providers.Edit, Models.Providers>();
             CreateMap<Models.BizModels.Providers.New, Models.Providers>();
